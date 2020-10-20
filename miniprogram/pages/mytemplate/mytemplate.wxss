@@ -1,0 +1,6 @@
+@import "../../template/plan-template/plan-template.wxss";
+.template_box {
+  height: 2000rpx;
+  background-color: rgb(193, 238, 163);
+  border-radius: 80rpx;
+}

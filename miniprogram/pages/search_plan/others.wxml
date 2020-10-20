@@ -1,0 +1,14 @@
+<import src="../../template/plan-template/plan-template.wxml" />
+<view class='pageback'>
+	<!-- 计划模板广场 -->
+	<view class='template_box'>
+		<view class='tips_area'>
+			<text class="tips_text">以下为搜索出的所有计划</text>
+		</view>
+		<block wx:for="{{item_key}}" wx:for-item="item">
+			<view class='collect_container' catchtap="OnTemplateTap" id="{{item.plan_id}}" data-postId="{{item.postId}}">
+				<template is="wordItem" data-postId="{{item.postId}}" data="{{item}}" />
+			</view>
+		</block>
+	</view>
+  </view>

@@ -1,0 +1,12 @@
+.icon{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.img_icon{
+  width: 90rpx;
+  height: 90rpx;
+  margin-top:8rpx;
+  margin-right: 5rpx;
+  border-radius: 50%;
+}

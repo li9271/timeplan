@@ -1,0 +1,218 @@
+page {
+  background-color: #f5ffcb;
+}
+
+.containers {
+  background-color: #f5ffcb;
+  flex-direction: column;
+  justify-content: center;
+  height: 1000rpx;
+}
+
+.img_containers {
+  height: 150rpx;
+  display: flex;
+}
+
+/*复制*/
+
+.imgs {
+  height: 130rpx;
+  padding-top: 35rpx;
+  display: flex;
+}
+
+.img-item {
+  width: 300rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* padding: 20rpx; */
+}
+
+.img-item .img-image {
+  width: 55rpx;
+  height: 55rpx;
+  /* margin: 5rpx; */
+}
+
+.img-item text {
+  height: 10rpx;
+  font-size: 40rpx;
+  font-family: 黑体;
+  color: gray;
+}
+
+.num {
+  height: 10rpx;
+  font-size: 35rpx;
+  font-family: 黑体;
+}
+
+.plan_detail {
+  margin-left: 32rpx;
+  width: 92%;
+  flex-direction: row;
+  height: 1000rpx;
+  background-color: #fff;
+  /* box-shadow: 4rpx 4rpx 5rpx 4rpx rgb(200, 199, 199);  */
+  border-top-right-radius: 150rpx;
+}
+
+.plan_box {
+  padding-top: 20rpx;
+  padding-left: 40rpx;
+  height: 600rpx;
+  /* background-color: #fff; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; *//* align-items: center; */
+}
+
+.plan_content {
+  font-size: 36rpx;
+  font-family: 宋体;
+  color: black;
+  word-break: break-all;
+}
+
+.plan_name {
+  margin-top: 30rpx;
+  font-size: 48rpx;
+  font-family: ‘Gill Sans’, ‘Gill Sans MT’, Calibri, ‘Trebuchet MS’, sans-serif;
+  color: #fff;
+  width: 600rpx;
+}
+
+.plan_name_box {
+  margin-left: 20rpx;
+  height: 90rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.plan_author {
+  font-size: 36rpx;
+  font-family: 宋体;
+  color: black;
+}
+
+.Time_container {
+  margin: 10rpx;
+  height: 100rpx;
+  width: 70%;
+  float: right;
+}
+
+.start_Time {
+  height: 50rpx;
+  width: 80%;
+  float: right;
+  font-size: 36rpx;
+  font-family: 宋体;
+  color: black;
+}
+
+.end_Time {
+  height: 80rpx;
+  width: 80%;
+  float: right;
+  font-size: 36rpx;
+  font-family: 宋体;
+  color: black;
+}
+
+.image_container {
+  margin-top: 40rpx;
+  height: 150rpx;
+}
+
+.click {
+  margin-top: 50rpx;
+  margin-left: 110rpx;
+  width: 60rpx;
+  height: 65rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.like {
+  margin-top: 50rpx;
+  margin-left: 110rpx;
+  width: 65rpx;
+  height: 65rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.unlike {
+  margin-top: 50rpx;
+  margin-left: 110rpx;
+  width: 65rpx;
+  height: 65rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.collect_container {
+  height: 120rpx;
+  width: 120rpx;
+  border-radius: 140rpx;
+  background-color: #fff;
+  /* border:1rpx solid gray; */
+  margin-left: 560rpx;
+  position: relative;
+  box-shadow: 0px 0px 3px 1px #d6f8b8;
+}
+
+.collect {
+  /* margin-top: 50rpx; */
+  padding-left: 27rpx;
+  padding-top: 30rpx;
+  width: 65rpx;
+  height: 65rpx;
+}
+
+.weui-cell-third{
+background: #fff;
+}
+.weui-cell-list{
+background: #fff;
+margin: 5px 30px 5px 30px;
+}
+.weui-cell-line{
+/* width: 100px; */
+margin-left: 5px;
+border-left: 1px solid #ddd;
+height: 150px;
+background: #fff
+}
+.weui-cell-circle{
+border: 1px solid #000;
+border-radius: 10px;
+width: 10px;
+height: 10px;
+border-color: rgb(98, 223, 139);
+}
+.weui-cell-time{
+/* width: 50px; */
+float: left;
+font-size:14px;
+padding-left: 15px;
+padding-top: 20rpx;
+width: 100%;
+}
+.weui-cell-event{
+padding-top: 15px;
+padding-left: 15px;
+}
+.weui-cell-name{
+font-size:14px;
+height:23px;
+margin-left: 100px;
+}

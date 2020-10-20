@@ -1,0 +1,53 @@
+page {
+  background-color: #f7f1f1;
+}
+.template_container {
+  width: 80%;
+  /* padding-top: 50rpx; */
+  padding-left: 70rpx;
+  height: 150rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.plan_Content{
+  font-size: 35rpx;
+  font-family: 黑体;
+}
+
+.plan_Name{
+  font-size: 35rpx;
+  font-family: 黑体;
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+}
+.start_Time{
+  height: 50rpx;
+  width: 80%;
+  float: right;
+  font-size: 30rpx;
+  font-family: 黑体;
+}
+.end_Time{
+  height: 80rpx;
+  width: 80%;
+  float: right;
+  font-size: 30rpx;
+  font-family: 黑体;
+}
+.template_area {
+  margin-left: 40rpx;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 40rpx;
+  margin-bottom: 60rpx;
+  background-color: #e1fcc9;
+  /* border: 1px solid #86c798; */
+  box-shadow: 0px 10px 25px #acdeaa;
+  height: 300rpx;
+  width: 90%;
+}
+.Time_container{
+  height: 100rpx;
+  width: 400rpx;
+}

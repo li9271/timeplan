@@ -1,0 +1,39 @@
+<template name="wordItem">
+  <view class='containersss'>
+    <view class="cu-card case {{isCard?'no-card':''}}">
+  <view class="cu-item shadow">
+    <view class='card_mid' bindtap="OnDetailTap">
+      <view class='plan_name' decode="true">{{item.plan_name}}
+          <view class="cu-tag bg-green light sm round">{{item.plan_type}}</view></view>
+      <view class='plan_content'>{{item.plan_content}}</view>
+    </view>
+    <view class="cu-list menu-avatar">  
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{item.user_image}});" bindtap="onOthersTap"></view>
+        <view class="content flex-sub">
+          <view class="text-grey">{{item.user_name}}</view>
+          <view class="text-gray text-sm flex justify-between">
+            {{item.plan_start_time}}
+            <view class="text-gray text-sm">
+              <image class='card_icon' src='{{item.like_anti}}'></image> {{item.plan_like}}
+              <image class='card_icon' src='{{item.unlike_anti}}'></image> {{item.plan_dislike}}
+              <image class='card_icon' src='{{item.share_anti}}'></image> {{item.plan_share}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+  </view>
+</template>
+<!-- 样例 -->
+<block wx:for="{{item_key}}" wx:for-item="item">
+  <view class='collect_container' data-id="{{item.postId}}" wx:if="{{!flag&&currentPostId==item.postId}}" catchtap="OnCollectTap" bindlongpress="longTap" bindtouchstart="bindTouchStart" bindtouchend="bindTouchEnd">
+    <image wx:if="{{collected}}" class='collected_img' src="../images/collect-anti.png"></image>
+    <image wx:else class='collected_img' src="../images/collect.png"></image>
+  </view>
+  <view wx:else catchtap="OnWordTap" data-postId="{{item.postId}}" bindlongpress="longTap" bindtouchstart="bindTouchStart" bindtouchend="bindTouchEnd">
+    <template is="wordItem" data-postId="{{item.postId}}" data="{{item}}" />
+  </view>
+</block>

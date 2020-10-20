@@ -1,0 +1,10 @@
+<view class='task_cate'>
+	<view wx:for="{{cateArr}}" class='cate_item' wx:key="cate" bindtap='clickCate' data-index="{{index}}">
+		<view class='cate_text {{index == cateActive ? "cate_text_active":""}}'>{{item.text}}</view>
+	</view>
+</view>
+<view class="opinion_content">
+	<textarea class='textarea_box' placeholder='请输入具体意见/反馈内容' placeholder-class="placestyle" type='text' bindinput='getOpinionTap'></textarea>
+</view>
+<button class="submit" bindtap="OnSubmitTap">提交意见反馈</button>
+<!-- <van-toast id="van-toast"/> -->

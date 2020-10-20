@@ -1,0 +1,5 @@
+<template name="dynamic-template">
+  <view class='dynamic'>
+    <text>{{item.hhh}}</text>
+  </view>
+</template>

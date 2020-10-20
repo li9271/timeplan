@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "计划详情",
+  "navigationBarBackgroundColor": "#98c9a3",
+  "usingComponents": {
+    "timeAxis": "../../TimeComponent/TimeComponent"
+  }
+}

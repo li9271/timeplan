@@ -1,0 +1,37 @@
+<import src="../../template/plan-template/plan-template.wxml" />
+<view class='pageback'>
+	<view class='top'>
+		<view class='mid'>
+			<view class='mid-left'>
+				<image class='head' src='{{user_image}}'></image>
+			</view>
+			<view class='mid-right'>
+				<view class='name'>{{nickName}}</view>
+				<view class='name'>Lv.{{grade}}</view>
+			</view>
+		</view>
+	</view>
+	<view class='manage'>
+		<view class='manage_content'>
+			<view class='like'>
+				<view style='color:rgb(73, 73, 73)'>完成计划数</view>
+				<view class='m_data'>{{plan_complish_number}}</view>
+			</view>
+			<view class='msg'>
+				<view style='color:rgb(73, 73, 73)'>番茄钟使用时间</view>
+				<view class='m_data'>{{tomato_time}}</view>
+			</view>
+		</view>
+	</view>
+	<!-- 计划模板广场 -->
+	<view class='template_box'>
+		<view class='tips_area'>
+			<text class="tips_text">以下为他的所有计划</text>
+		</view>
+		<block wx:for="{{item_key}}" wx:for-item="item">
+			<view class='collect_container' catchtap="OnTemplateTap" id="{{item.plan_id}}" data-postId="{{item.postId}}">
+				<template is="wordItem" data-postId="{{item.postId}}" data="{{item}}" />
+			</view>
+		</block>
+	</view>
+  </view>

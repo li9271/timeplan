@@ -1,0 +1,32 @@
+/* pages/index/index.wxss */
+.container{
+  background-image: url("https://7469-timeplan-9yepf-1259735400.tcb.qcloud.la/image/empower_bg.jpg?sign=5bdfaa227a93bb36edd46764f54f0129&t=1590242817");
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  z-index:-1;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 250rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+  font-size: 30rpx;
+}
+.usermotto {
+   font-size: 50rpx;
+}

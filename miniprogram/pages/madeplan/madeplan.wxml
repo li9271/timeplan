@@ -1,0 +1,43 @@
+<!--pages/madeplan/madeplan.wxml-->
+<view class='page'>
+	<view class='plan'>
+		<input class='plan_title' placeholder="请输入计划标题" bindinput='getPlanName'></input>
+	</view>
+	<view class="plan_content">
+		<textarea class='textarea_box' placeholder='请输入计划内容' placeholder-class="placestyle" type='text' bindinput='getPlanContent'></textarea>
+	</view>
+	<view class='select_menu'>
+		<text class='text_1'>选择分类</text>
+		<text class='select_text' bindtap='OnSelectMenu'>{{current_name}}</text>
+		<image src='../../images/plan/madeplan/more.png' class='select_img' bindtap='OnSelectMenu'></image>
+	</view>
+	<view class='select_box' wx:if="{{selected}}">
+		<view wx:for="{{item_name}}" wx:key='unique'>
+			<view class='selecetd_one' bindtap='OnMySelectTap' data-name="{{item}}">{{item}}</view>
+		</view>
+	</view>
+	<view class="tui-picker-content">
+		<picker mode="date" value="{{date1}}" start="2000-01-01" end="2030-12-31" bindchange="changeDate1">
+			<view class="tui-picker-detail">
+				选择计划开始时间：\t{{date1}}
+			</view>
+		</picker>
+		<picker mode="date" value="{{date2}}" start="2000-01-01" end="2030-12-31" bindchange="changeDate2">
+			<view class="tui-picker-detail">
+				选择计划结束时间：\t{{date2}}
+			</view>
+		</picker>
+	</view>
+	<view class="check">
+		<checkbox-group bindchange="checkboxChange">
+			<label class="checkbox" wx:for="{{itemss}}">
+				<view class="tui-menu-list">
+					<checkbox value="{{item.name}}" checked="{{item.checked}}" />\t \t{{item.name}}</view>
+			</label>
+		</checkbox-group>
+	</view>
+	<view class='plan_content'>
+		<button class='publish' bindtap='addPlan'>点击添加计划步骤</button>
+		<button class='cancle' bindtap='cancle'>取消</button>
+	</view>
+</view>

@@ -1,0 +1,57 @@
+<view class='containers' data="{{item}}" data-postId="{{item.postId}}">
+	<!-- 计划详情展示 -->
+	<view class='plan_detail'>
+		<view class='userimg_container'>
+			<image class='user_img' src="{{userInfo.avatarUrl}}"></image>
+		</view>
+		<!-- 计划 -->
+		<view class='plan_box'>
+			<text class='tips_name'>| 计划标题</text>
+			<text class='plan_name' selectable='true'>{{plan_name}}</text>
+			<text class='tips_name'>| 计划简介</text>
+			<text class='plan_content' selectable='true'>{{plan_content}}</text>
+			<view class="plantime">
+				<text class='tips_time1'>| 计划开始时间</text>
+				<text class='starttime' selectable='true'>{{startime}}</text>
+				<text class='tips_time2'>| 计划结束时间</text>
+				<text class='endtime' selectable='true'>{{endtime}}</text>
+			</view>
+		</view>
+		<view class="container">
+			<block wx:if="{{ todos.length }}">
+				<view class="todos">
+					<view class="item" wx:for="{{ todos }}" wx:key="id" bindtap="todoChange" data-index="{{ index }}">
+						<icon type="success" color="{{ item.complete ? '' : '#ccc' }}" size="20"></icon>
+						<text class="{{ item.complete ? 'complete' : '' }}">{{ item.name }}</text>
+						<view class="content">
+							<text class="{{ item.complete ? 'step_content' : '' }}">{{ item.content }}</text>
+						</view>
+
+					</view>
+				</view>
+				<!-- <view class="footer">
+					<text class="footer_text" bindtap="toggleAllChange">{{ allText }}</text>
+					<text class="footer_text" wx:if="{{ todoNum }}">{{ todoNum }} {{ todoNum > 1 ? 'items' : 'item'}} left</text>
+					<text class="footer_text" bindtap="clearChange">清空选中记录</text>
+				</view> -->
+			</block>
+			<view wx:else>
+				<text>暂无计划步骤</text>
+			</view>
+		</view>
+		<view class='add_del'>
+			<button bindtap="OnAddTap" class='add_style'>修改</button>
+			<button bindtap="OnDelTap" class='del_style'>删除</button>
+		</view>
+		<view class='image_container'>
+			<image catchtap="onLikeTap" class='like' src="../../images/show/like.png"></image>
+			<text class="like_num">{{like_num}}</text>
+			<image catchtap="onUnLikeTap" class='dilike' src="../../images/show/unlike.png"></image>
+			<text class="dislike_num">{{dislike_num}}</text>
+			<image catchtap="onShareTap" class='share' src="../../images/show/share.png"></image>
+			<text class="share_num">{{share_num}}</text>
+		</view>
+	</view>
+
+
+</view>

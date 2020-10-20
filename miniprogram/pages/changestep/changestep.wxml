@@ -1,0 +1,18 @@
+<!--pages/madeplan/madeplan.wxml-->
+<view class='page'>
+	<view class='plan_content'>
+		<block wx:for="{{step_data}}" wx:key="{{id}}" wx:for-item="itemName" >
+			<view class='plan_list'>
+				<image class='images_made' src='{{img_made}}'></image>
+				<input class='create-li' data-id="{{index}}" placeholder="请输入计划步骤标题" bindinput='getStepName' value="{{itemName.name}}"></input>
+				<textarea class='textarea_box' data-id="{{index}}" placeholder='请输入步骤内容' placeholder-class="placestyle" type='text' bindinput='getStepContent' value="{{itemName.content}}"></textarea>
+			</view>
+		</block>
+			<image class='add_img' src='{{add_img}}' bindtap="addList"></image>
+      <image class='sub_img' src='{{sub_img}}' bindtap="delList"></image>
+		<!-- <button class='add-li' bindtap='addList'>添加一项</button>
+		<button class='add-li' bindtap='delList'>删除一项</button> -->
+		<button class='publish' bindtap='addStep'>确认修改</button>
+		<button class='cancle' bindtap='cancle'>取消</button>
+	</view>
+</view>

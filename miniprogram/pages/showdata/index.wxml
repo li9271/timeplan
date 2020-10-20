@@ -1,0 +1,37 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+
+	<view class="title">
+        历史任务时间柱状图
+	</view>
+  <view class="container">
+    <canvas canvas-id="columnCanvas" class="canvas" ></canvas>
+  </view>
+
+<view class="title">
+        历史任务时间饼状图
+	</view>
+<view class="container">
+    <canvas canvas-id="pieCanvas" class="canvas" style="height:300px" ></canvas>
+</view>
+
+	<view class="title">
+        今日任务时间柱状图
+	</view >
+  <view class="container">
+    <canvas canvas-id="columnCanvas-date" class="canvas" ></canvas>
+</view>
+
+
+<view class="title">
+        今日任务时间饼状图
+	</view>
+<view class="container">
+    <canvas canvas-id="pieCanvas-date" class="canvas" style="height:300px" ></canvas>
+ </view>
+
+
+
+
+</view>
+

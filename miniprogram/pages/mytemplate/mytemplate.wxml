@@ -1,0 +1,8 @@
+<import src="../../template/plan-template/plan-template.wxml" />
+<view class='template_box'>
+    <block wx:for="{{item_key}}" wx:for-item="item">
+      <view class='collect_container' catchtap="OnTemplateTap" data-postId="{{item.postId}}">
+        <template is="wordItem" data-postId="{{item.postId}}" data="{{item}}" />
+      </view>
+    </block>
+  </view>

@@ -1,0 +1,88 @@
+<import src="../../template/plan-template/plan-template.wxml" />
+<!--计划页面-->
+
+<scroll-view scroll-y class="backg DrawerPage {{modalName=='viewModal'?'show':''}}">
+   <!-- <view class='pageback'>      -->
+  <!-- <view class='body'> -->
+  <!-- <image class='bgimg' src='{{bgimg}}'></image> -->
+  <!-- 搜索框 -->
+  <view class="cu-bar search fixed search-position" style="top:{{CustomBar}}px"><view class='logo_text'>Plan</view>
+    <view class="search-form round" bindtap="searchIcon">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="搜索计划" confirm-type="search" bindinput="searchIcon"></input>
+    </view>
+  </view>
+  <!-- 轮播图 -->
+  <view class='sw'>
+    <swiper class="card-swiper square-dot sw-a" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#6a9c78">
+      <swiper-item wx:for="{{swiperList}}"  class="{{cardCur==index?'cur':''}}" wx:key="key">
+        <view class="swiper-item">
+          <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+          <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+        </view>
+      </swiper-item>
+    </swiper> 
+  </view>  
+  <!-- mid -->
+  <!-- <view class='mid-part'> -->
+    <view class='task_cate'>
+      <view wx:for="{{cateMid}}" class='cate_item' wx:key="cate" bindtap='clickCate' data-index="{{index}}">
+        <view class='cate_icon'><image class='icon-m' src='../../images/plan/{{item.icon}}.png'></image></view>
+        <view class='cate_text {{index == cateActive ? "cate_text_active":""}}'>{{item.text}}</view>
+      </view>
+    </view>
+    <!-- part_new -->
+    <view class='new cu-btn bg-green block shadow' bindtap="onAddTap">
+      <image style='width:80rpx;height:60rpx;' src='{{add}}'></image> 
+    </view>
+    <view class='part'>
+      <image class='part_l' src="https://7469-timeplan-9yepf-1259735400.tcb.qcloud.la/image/plan/mid_3.jpg?sign=5c8823a074a1649f7b6a8069062fe59f&t=1590244589"></image>
+      <view class='part_r'>
+        <image class='part_top' src="https://7469-timeplan-9yepf-1259735400.tcb.qcloud.la/image/plan/mid_1.jpg?sign=ff29cb3bd56f818e3a244949b374d66b&t=1590244572"></image>
+        <image class='part_bottom' src="https://7469-timeplan-9yepf-1259735400.tcb.qcloud.la/image/plan/mid_2.jpg?sign=d0023800f5c7c181ddff889660847795&t=1590244580"></image>
+      </view>
+    </view>
+  <!-- </view> -->
+  <!-- </view> -->
+  <view class='padding margin text-center'>
+    <view class='cu-btn bg-green lg block shadow radius margin-xl' bindtap="showModal" data-target="viewModal">
+      选择分类
+    </view>
+  </view>
+  <!-- 计划模板广场 -->
+  <view class='template_box'>
+  <view class='tips_area'>
+    <text class="tips_text">以下为所有计划模板</text>
+  </view>
+  <block wx:for="{{item_key}}" wx:for-item="item" wx:key="key">
+    <view class='collect_container'  data-postId="{{item.postId}}" bindtap="DetailTap" id="{{item.plan_id}}" >
+      <template is="wordItem" data-postId="{{item.postId}}" data="{{item}}" />
+    </view>
+  </block>
+  <!-- </view> -->
+</view>
+</scroll-view>
+		<view class="DrawerClose {{modalName=='viewModal'?'show':''}}" bindtap="hideModal">
+			<text class="cuIcon-pullright"></text>
+		</view>
+		<scroll-view scroll-y class="DrawerWindow {{modalName=='viewModal'?'show':''}}">
+     <view class='body'>
+      <view class="padding flex flex-direction">
+        <button class="cu-btn bg-grey lg bu">分类</button>
+      </view>
+			<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+				<view class="cu-item arrow" wx:for="{{item}}" wx:key="index" >
+					<view class="content" id="{{item.type}}" bindtap="onSelecttypeTap">
+						<text class="cuIcon-github text-grey"></text>
+						<text class="text-grey">{{item.type}}</text>
+					</view>
+				</view>
+			</view>
+     </view>
+		</scroll-view>
+  
+
+ 
+
+  
+

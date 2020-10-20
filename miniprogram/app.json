@@ -1,29 +1,57 @@
 {
   "pages": [
-    "pages/movie/movie",
-    "pages/profile/profile"
+    "pages/index/index",
+    "pages/plan/plan",
+    "pages/changestep/changestep",
+    "pages/changeplan/changeplan",
+    "pages/madestep/madestep",
+    "pages/madeplan/madeplan",
+    "pages/opinion/opinion",
+    "pages/plan_detail/plan_detail2",
+    "pages/myplan_data/plan_detail2",
+    "pages/my_plan/others",
+    "pages/personal/personal",
+    "pages/tomato/tomato",
+    "pages/search/search",
+    "pages/plan/guide",
+    "pages/more_function/more_function",
+    "pages/mytemplate/mytemplate",
+    "pages/template_detail/template_detail"
+    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor":"#E54847",
-    "navigationBarTitleText": "最新电影",
-    "navigationBarTextStyle":"white"
+    "navigationBarBackgroundColor": "#7dc383",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "color": "#000000",
-    "selectedColor":"#E54847",
-    "list": [{
-      "pagePath": "pages/movie/movie",
-      "text": "电影",
-      "iconPath": "images/film.png",
-      "selectedIconPath": "images/film-actived.png"
-    },{
-      "pagePath": "pages/profile/profile",
-      "text": "我的",
-      "iconPath": "images/profile.png",
-      "selectedIconPath": "images/profile-actived.png"
-    }]
+    "color": "#353535",
+    "selectedColor": "#497549",
+    "list": [
+      {
+        "pagePath": "pages/plan/plan",
+        "text": "首页",
+        "iconPath": "images/home-n.png",
+        "selectedIconPath": "images/home-a1.png"
+      },
+      {
+        "pagePath": "pages/tomato/tomato",
+        "text": "番茄钟",
+        "iconPath": "images/tomato-n.png",
+        "selectedIconPath": "images/tomato-a1.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "images/personal-n.png",
+        "selectedIconPath": "images/personal-a1.png"
+      }
+    ]
   }
 }

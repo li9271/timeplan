@@ -1,0 +1,196 @@
+/* pages/tomato/tomato.wxss */
+.canvas {
+    width: 280px;
+    height: 200px;
+}
+.pages{
+  background-color: white;
+}
+.title {
+	text-align: center;
+	position: relative;
+	margin-top: 100rpx;
+	margin-bottom: 50rpx;
+}
+.back-btn {
+	position: absolute;
+	left: 20rpx;
+	top: 0;
+}
+.slider{
+  width: 620rpx;
+  margin: 50rpx auto;
+}
+.task_text{
+  width:650rpx;
+  text-align: center;
+  margin : 30rpx auto;
+  margin-bottom: 50rpx;
+}
+.task_text .task_title{
+  font-size: 35rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-bottom: 15rpx;
+}
+.task_desc{
+  font-size: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color:#9999;
+}
+.task_cate{
+  width:600rpx;
+  margin:0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cate_item{
+  width:200rpx;
+  height:140rpx;
+  margin-bottom: 50rpx;
+  text-align: center;
+}
+.cate_icon{
+  height:80rpx;
+}
+.cate_icon image{
+  width:60rpx;
+  height:60rpx;
+}
+.cate_text{
+  height:60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color:#666666;
+}
+.cate_text_active {
+  color: #03bd61;
+  
+}
+.start{
+  width:260rpx;
+  height:100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  border: 1px solid #03bd61;
+  border-radius: 20rpx;
+  color: #03bd61;
+}
+.clock {
+  overflow: hidden;
+  /**background: #03bd61;**/
+  background-image: url(https://7469-timeplan-9yepf-1259735400.tcb.qcloud.la/image/timg.jpg?sign=0ad32b675e2cd10f832ba7fbe5c2b581&t=1590243489);
+}
+.progress {
+  width: 400rpx;
+  height: 400rpx;
+  /* background: orange; */
+  margin: 140rpx auto;
+  position: relative;
+}
+.progress .progress_bg,.progress .progress_active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 400rpx;
+  height: 400rpx;
+}
+.progress .progress_text {
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 35rpx;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  left: 120rpx;
+  top: 170rpx;
+}
+.btns .okBtn,.btns .pauseBtn,.btns .continueBtn,.btns .cancleBtn {
+  width: 280rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #ffffff;
+  border: 3rpx solid #ffffff;
+  border-radius: 20rpx;
+  margin: 0 auto 20rpx auto;
+}
+
+
+/** logs **/
+.sum {
+  display: flex;
+  flex-wrap: wrap;
+  width: 750rpx;
+  height: 350rpx;
+  border-bottom: 10rpx solid #eeeeee;
+
+}
+.sum .sum_item {
+  width: 375rpx;
+  height: 160rpx;
+  text-align: center;
+}
+.sum .sum_item .sum_item_title {
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 30rpx;
+  color: #6B747E;
+}
+.sum .sum_item .sum_item_val {
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #03bd61;
+}
+.detail {
+  width: 700rpx;
+  margin: 0 auto;
+}
+.detail_title {
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.detail_title .detail_title_text {
+  flex: 1;
+  font-size: 30rpx;
+}
+.detail_title .detail_title_type {
+  flex: 1;
+  text-align: right;
+  font-size: 25rpx;
+}
+.detail_title .detail_title_type text {
+  padding-left: 10rpx;
+}
+.active {
+  color: #03bd61;
+}
+.list_item {
+  display: flex;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+/* .list_item > view {
+  width: 200rpx;
+
+} */
+.list_item .list_item_date {
+  width: 300rpx;
+  font-size: 20rpx;
+  text-align: center;
+}
+.list_item .list_item_cate {
+  width: 200rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+.list_item .list_item_time {
+  width: 200rpx;
+  font-size: 30rpx;
+  text-align: right;
+}

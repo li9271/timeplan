@@ -1,0 +1,8 @@
+<template name="message_list" >
+  <van-cell clickable link-type="navigateTo" url="../chat/chat"
+  title="{{sugar_}}" value="{{item.time_send}}" size="large" label="{{item.message_small}}">
+    <view slot="icon">
+          <view class="icon"><image class="img_icon" src='../../images/chat/head-2.jpg' ></image></view>
+        </view> 
+  </van-cell>
+</template>

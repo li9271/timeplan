@@ -1,0 +1,20 @@
+<view class='container' data="{{item}}" data-postId="{{item.postId}}">
+  <view class='see_range_box'>
+    <text class='see_range'>{{aitemData[currentPostId].plan_Name}}</text>
+  </view>
+  <view class='plan_detail' style="background-color:{{aitemData[currentPostId].colors}}">
+    <view class='plan_box'>
+      <text class='plan_content' selectable='true'>{{aitemData[currentPostId].plan_Content}}</text>
+    </view>
+    <view class='plan_author_box'>
+      <text class='plan_author_name' selectable='true'>#{{aitemData[currentPostId].plan_author}}##{{aitemData[currentPostId].plan_Name}}#</text>
+    </view>
+  </view>
+  <view class='image_container'>
+    <image catchtap="onShareTap" class='share' src='{{aitemData[currentPostId].share_img}}'></image>
+    <image catchtap='OnSavePicTap' class='save' src='{{aitemData[currentPostId].save_img}}'></image>
+    <image catchtap='onCollectionTap' wx:if="{{collected}}" class='collect' src='{{aitemData[currentPostId].collect_anti_img}}'></image>
+    <image wx:else class='collect' catchtap='onCollectionTap' src='{{aitemData[currentPostId].collect_img}}'></image>
+
+  </view>
+</view>
